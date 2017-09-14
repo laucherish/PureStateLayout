@@ -62,6 +62,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-
+        switch (view.getId()) {
+            case R.id.btn_empty:
+                mStateLayout.showEmpty();
+                break;
+            case R.id.btn_error:
+                mStateLayout.showError();
+                break;
+            case R.id.btn_content:
+                mStateLayout.showContent();
+                break;
+            case R.id.btn_loading:
+                mStateLayout.showLoading();
+                break;
+        }
     }
 }
