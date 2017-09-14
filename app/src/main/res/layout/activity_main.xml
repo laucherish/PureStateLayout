@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.laucherish.purestatelayout.demo.MainActivity">
 
     <LinearLayout
@@ -40,5 +41,25 @@
             android:layout_weight="1"
             android:text="CONTENT"/>
     </LinearLayout>
+
+    <com.laucherish.purestatelayout.PureStateLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#854678"
+                android:gravity="center"
+                android:text="Content"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </com.laucherish.purestatelayout.PureStateLayout>
 
 </LinearLayout>
