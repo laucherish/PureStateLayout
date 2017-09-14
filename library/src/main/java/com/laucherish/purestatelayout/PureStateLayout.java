@@ -152,6 +152,8 @@ public class PureStateLayout extends FrameLayout {
                         getStateChangeListener().onEmptyRetryClick();
                     }
                 });
+            } else {
+                this.setOnClickListener(null);
             }
         }
     }
