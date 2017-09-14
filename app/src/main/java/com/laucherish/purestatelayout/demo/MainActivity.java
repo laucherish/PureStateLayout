@@ -35,6 +35,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         mStateLayout = (PureStateLayout) findViewById(R.id.pure_state_layout);
+        mStateLayout.setStateChangeListener(new PureStateLayout.SimpleStateChangeListener(){
+            @Override
+            public void onRetryClick() {
+                super.onRetryClick();
+                mStateLayout.showLoading();
+                mStateLayout.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (mRefreshLayout.isRefreshing()) {
+                            mRefreshLayout.setRefreshing(false);
+                        }
+                        mStateLayout.showContent();
+                    }
+                }, 3000);
+            }
+        });
         mBtnContent = (Button) findViewById(R.id.btn_content);
         mBtnEmpty = (Button) findViewById(R.id.btn_empty);
         mBtnError = (Button) findViewById(R.id.btn_error);

@@ -145,6 +145,14 @@ public class PureStateLayout extends FrameLayout{
                 enterView.setVisibility(VISIBLE);
                 enterView.setAlpha(1);
             }
+            if (newState == STATE_ERROR) {
+                this.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        getStateChangeListener().onRetryClick();
+                    }
+                });
+            }
         }
     }
 
@@ -225,7 +233,7 @@ public class PureStateLayout extends FrameLayout{
         return this;
     }
 
-    public void registerStateChangeListener(OnStateChangeListener stateChangeListener) {
+    public void setStateChangeListener(OnStateChangeListener stateChangeListener) {
         this.stateChangeListener = stateChangeListener;
     }
 
@@ -244,6 +252,8 @@ public class PureStateLayout extends FrameLayout{
         void onStateChange(int oldState, int newState);
 
         void animationState(View exitView, View enterView);
+
+        void onRetryClick();
     }
 
     public static class SimpleStateChangeListener implements OnStateChangeListener {
@@ -297,6 +307,11 @@ public class PureStateLayout extends FrameLayout{
                 enterView.setVisibility(VISIBLE);
                 enterView.setAlpha(1);
             }
+        }
+
+        @Override
+        public void onRetryClick() {
+
         }
     }
 }
