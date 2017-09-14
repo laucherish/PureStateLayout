@@ -16,7 +16,7 @@ import android.widget.FrameLayout;
  * Created by laucherish on 2017/9/14.
  */
 
-public class PureStateLayout extends FrameLayout{
+public class PureStateLayout extends FrameLayout {
 
     View loadingView, errorView, emptyView, contentView;
 
@@ -98,9 +98,7 @@ public class PureStateLayout extends FrameLayout{
                 setDisplayState(STATE_CONTENT);
             }
         }
-
     }
-
 
     public void setDisplayState(int newState) {
         int oldState = displayState;
@@ -121,7 +119,6 @@ public class PureStateLayout extends FrameLayout{
                     notifyStateChange(oldState, newState, contentView);
                     break;
             }
-
         }
     }
 
@@ -131,7 +128,6 @@ public class PureStateLayout extends FrameLayout{
         if (oldState == STATE_EMPTY) return emptyView;
         return contentView;
     }
-
 
     private void notifyStateChange(int oldState, int newState, View enterView) {
         if (enterView != null) {
@@ -145,11 +141,19 @@ public class PureStateLayout extends FrameLayout{
                 enterView.setVisibility(VISIBLE);
                 enterView.setAlpha(1);
             }
+
             if (newState == STATE_ERROR) {
                 this.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        getStateChangeListener().onRetryClick();
+                        getStateChangeListener().onErrorRetryClick();
+                    }
+                });
+            } else if (newState == STATE_EMPTY) {
+                this.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        getStateChangeListener().onEmptyRetryClick();
                     }
                 });
             }
@@ -253,7 +257,9 @@ public class PureStateLayout extends FrameLayout{
 
         void animationState(View exitView, View enterView);
 
-        void onRetryClick();
+        void onErrorRetryClick();
+
+        void onEmptyRetryClick();
     }
 
     public static class SimpleStateChangeListener implements OnStateChangeListener {
@@ -310,7 +316,12 @@ public class PureStateLayout extends FrameLayout{
         }
 
         @Override
-        public void onRetryClick() {
+        public void onErrorRetryClick() {
+
+        }
+
+        @Override
+        public void onEmptyRetryClick() {
 
         }
     }

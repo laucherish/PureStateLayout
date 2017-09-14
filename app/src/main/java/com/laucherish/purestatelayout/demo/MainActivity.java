@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mStateLayout = (PureStateLayout) findViewById(R.id.pure_state_layout);
         mStateLayout.setStateChangeListener(new PureStateLayout.SimpleStateChangeListener(){
             @Override
-            public void onRetryClick() {
-                super.onRetryClick();
+            public void onErrorRetryClick() {
+                super.onErrorRetryClick();
                 mStateLayout.showLoading();
                 mStateLayout.postDelayed(new Runnable() {
                     @Override
@@ -46,7 +46,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (mRefreshLayout.isRefreshing()) {
                             mRefreshLayout.setRefreshing(false);
                         }
-                        mStateLayout.showContent();
+                        mStateLayout.showEmpty();
+                    }
+                }, 3000);
+            }
+
+            @Override
+            public void onEmptyRetryClick() {
+                super.onEmptyRetryClick();
+                mStateLayout.showLoading();
+                mStateLayout.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (mRefreshLayout.isRefreshing()) {
+                            mRefreshLayout.setRefreshing(false);
+                        }
+                        mStateLayout.showError();
                     }
                 }, 3000);
             }
