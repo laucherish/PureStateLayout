@@ -10,16 +10,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawablePadding="10dp"
-        android:drawableTop="@mipmap/ic_error"
+        android:drawableTop="@drawable/ic_error"
         android:gravity="center"
         android:scaleType="centerInside"
-        android:text="加载失败"/>
+        android:text="@string/load_error"/>
 
     <TextView
         android:id="@+id/btn_retry"
-        android:textColor="@color/colorAccent"
+        android:textColor="#FF4081"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击重试"/>
+        android:text="@string/load_retry"/>
 
 </LinearLayout>

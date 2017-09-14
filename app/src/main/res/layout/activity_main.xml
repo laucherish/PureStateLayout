@@ -50,10 +50,7 @@
         <com.laucherish.purestatelayout.PureStateLayout
             android:id="@+id/pure_state_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:p_emptyLayoutId="@layout/view_empty"
-            app:p_errorLayoutId="@layout/view_error"
-            app:p_loadingLayoutId="@layout/view_loading">
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="match_parent"

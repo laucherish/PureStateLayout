@@ -47,9 +47,9 @@ public class PureStateLayout extends FrameLayout{
 
     private void setupAttrs(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PureStateLayout);
-        loadingLayoutId = typedArray.getResourceId(R.styleable.PureStateLayout_p_loadingLayoutId, RES_NONE);
-        errorLayoutId = typedArray.getResourceId(R.styleable.PureStateLayout_p_errorLayoutId, RES_NONE);
-        emptyLayoutId = typedArray.getResourceId(R.styleable.PureStateLayout_p_emptyLayoutId, RES_NONE);
+        loadingLayoutId = typedArray.getResourceId(R.styleable.PureStateLayout_p_loadingLayoutId, R.layout.view_pure_loading);
+        errorLayoutId = typedArray.getResourceId(R.styleable.PureStateLayout_p_errorLayoutId, R.layout.view_pure_error);
+        emptyLayoutId = typedArray.getResourceId(R.styleable.PureStateLayout_p_emptyLayoutId, R.layout.view_pure_empty);
         contentLayoutId = typedArray.getResourceId(R.styleable.PureStateLayout_p_contentLayoutId, RES_NONE);
         typedArray.recycle();
     }
