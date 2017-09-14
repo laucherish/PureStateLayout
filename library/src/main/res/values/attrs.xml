@@ -2,8 +2,8 @@
 <resources>
     <declare-styleable name="PureStateLayout">
         <attr name="p_contentLayoutId" format="reference" />
-        <attr name="p_loadingLayoutId" format="reference" />
         <attr name="p_emptyLayoutId" format="reference" />
+        <attr name="p_loadingLayoutId" format="reference" />
         <attr name="p_errorLayoutId" format="reference" />
     </declare-styleable>
 </resources>

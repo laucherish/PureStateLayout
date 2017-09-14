@@ -92,11 +92,7 @@ public class PureStateLayout extends FrameLayout {
                 getChildAt(index).setVisibility(GONE);
             }
 
-            if (loadingView != null) {
-                setDisplayState(STATE_LOADING);
-            } else {
-                setDisplayState(STATE_CONTENT);
-            }
+            setDisplayState(STATE_CONTENT);
         }
     }
 
