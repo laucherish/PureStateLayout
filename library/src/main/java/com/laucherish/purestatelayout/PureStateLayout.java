@@ -160,7 +160,6 @@ public class PureStateLayout extends FrameLayout {
         }
     }
 
-
     public int getState() {
         return displayState;
     }
