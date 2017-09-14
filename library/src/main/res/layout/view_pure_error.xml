@@ -13,13 +13,13 @@
         android:drawableTop="@drawable/ic_error"
         android:gravity="center"
         android:scaleType="centerInside"
-        android:text="@string/load_error"/>
+        android:text="@string/pure_state_error"/>
 
     <TextView
         android:id="@+id/tv_retry"
         android:textColor="#FF4081"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/load_retry"/>
+        android:text="@string/pure_state_retry"/>
 
 </LinearLayout>

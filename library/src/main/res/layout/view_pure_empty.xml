@@ -12,6 +12,6 @@
         android:drawableTop="@drawable/ic_empty"
         android:gravity="center"
         android:scaleType="centerInside"
-        android:text="@string/load_empty"/>
+        android:text="@string/pure_state_empty"/>
 
 </LinearLayout>
