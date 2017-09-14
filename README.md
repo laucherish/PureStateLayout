@@ -11,7 +11,7 @@ allprojects {
 			maven { url 'https://jitpack.io' }
 		}
 	}
-```java
+```
 
 ## 2.添加依赖
 ```java
