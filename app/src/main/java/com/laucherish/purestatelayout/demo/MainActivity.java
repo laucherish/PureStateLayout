@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnEmpty, mBtnError, mBtnLoading, mBtnContent;
     private SwipeRefreshLayout mRefreshLayout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
