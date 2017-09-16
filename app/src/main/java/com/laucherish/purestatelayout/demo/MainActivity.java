@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onRefresh() {
                 mStateLayout.showLoading();
-
                 mStateLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
