@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnEmpty.setOnClickListener(this);
         mBtnError.setOnClickListener(this);
         mBtnLoading.setOnClickListener(this);
-
         getData();
     }
 
