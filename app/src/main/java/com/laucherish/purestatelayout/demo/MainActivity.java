@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnLoading.setOnClickListener(this);
 
         getData();
-
     }
 
     private void getData(){
