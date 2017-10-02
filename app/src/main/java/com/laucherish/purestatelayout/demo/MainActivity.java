@@ -89,9 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mStateLayout.showError();
             }
         }, 3000);
-
-
-
     }
 
     @Override
