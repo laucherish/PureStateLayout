@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mRefreshLayout.setRefreshing(false);
                 }
                 mStateLayout.showError();
+
             }
         }, 3000);
     }
