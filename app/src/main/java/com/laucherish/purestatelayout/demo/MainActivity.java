@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getData();
     }
 
+
     private void getData(){
         mStateLayout.showLoading();
         mStateLayout.postDelayed(new Runnable() {
