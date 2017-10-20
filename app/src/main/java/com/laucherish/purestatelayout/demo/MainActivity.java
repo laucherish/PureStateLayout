@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         mStateLayout.showContent();
                     }
                 }, 3000);
+
             }
         });
         mStateLayout = (PureStateLayout) findViewById(R.id.pure_state_layout);
