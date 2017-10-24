@@ -107,5 +107,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mStateLayout.showLoading();
                 break;
         }
+
     }
 }
