@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_error:
                 mStateLayout.showError();
+
                 break;
             case R.id.btn_content:
                 mStateLayout.showContent();
