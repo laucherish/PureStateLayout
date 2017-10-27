@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.btn_empty:
                 mStateLayout.showEmpty();
-
                 break;
             case R.id.btn_error:
                 mStateLayout.showError();
